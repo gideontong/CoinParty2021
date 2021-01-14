@@ -1,1 +1,8 @@
-{}
+{
+    "addresses": {},
+    "strings": {
+        "main": {
+            "subtitle": "Welcome to the Bitcoin Cash casino!"
+        }
+    }
+}
