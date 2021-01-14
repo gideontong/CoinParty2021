@@ -1,4 +1,5 @@
 from json import load, dump
+from bitcash import Key as key
 
 secrets = None
 config = None
