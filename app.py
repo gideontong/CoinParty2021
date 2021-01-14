@@ -1,7 +1,5 @@
 from json import load, dump
 from bitcash import Key
-from consolemenu import ConsoleMenu as Menu
-from consolemenu.items import FunctionItem as Option, MenuItem as SubMenu
 from project import GameMenus
 
 folder = 'config'
@@ -17,7 +15,7 @@ def on_open():
 
 def main():
     global secrets, config
-    GameMenus(config, secrets)
+    menus = GameMenus(config, secrets)
 
 def on_exit():
     global secrets
