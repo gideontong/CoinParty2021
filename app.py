@@ -1,5 +1,4 @@
 from json import load, dump
-from bitcash import Key
 from project import GameMenus
 
 folder = 'config'
@@ -13,6 +12,8 @@ def on_open():
 
 def main(secrets, config):
     menus = GameMenus(config, secrets)
+    main_menu = menus.create_menu('main')
+    main_menu.show()
 
 def on_exit(secrets):
     with open(f'{folder}/secrets.json', 'w') as secrets_file:

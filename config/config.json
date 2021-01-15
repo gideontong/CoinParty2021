@@ -3,8 +3,18 @@
     "menus": {
         "main": {
             "title": "Main Menu",
-            "subtitle": "Welcome to the Bitcoin Cash casino!",
+            "subtitle": "Welcome to InsideParty!",
             "options": [
+                {
+                    "type": "menu",
+                    "label": "View Recent Transactions",
+                    "function": "transactions"
+                },
+                {
+                    "type": "function",
+                    "label": "Transfer Money",
+                    "function": "transfer"
+                },
                 {
                     "type": "function",
                     "label": "Tumble Money",
@@ -20,6 +30,11 @@
         "options": {
             "title": "Options",
             "subtitle": "View options here.",
+            "options": []
+        },
+        "transactions": {
+            "title": "Transactions",
+            "subtitle": "View recent transactions on the BCH network.",
             "options": []
         }
     }
