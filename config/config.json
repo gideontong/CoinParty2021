@@ -1,8 +1,21 @@
 {
     "addresses": {},
-    "strings": {
+    "menus": {
         "main": {
-            "subtitle": "Welcome to the Bitcoin Cash casino!"
+            "title": "Main Menu",
+            "subtitle": "Welcome to the Bitcoin Cash casino!",
+            "options": [
+                {
+                    "type": "function",
+                    "label": "Tumble Money",
+                    "function": "tumble"
+                },
+                {
+                    "type": "menu",
+                    "label": "Options",
+                    "function": "options"
+                }
+            ]
         }
     }
 }
