@@ -1,5 +1,6 @@
 from consolemenu import ConsoleMenu as Menu
 from consolemenu.items import FunctionItem as Option, SubmenuItem as Submenu
+from project.helper import Helper
 
 class GameMenus:
     def __init__(self, config: dict, secrets: dict):
@@ -14,5 +15,10 @@ class GameMenus:
                 submenu = self.create_menu(item['function'])
                 menu.append_item(Submenu(item['label'], submenu, menu))
             elif item['type'] == 'function':
-                pass
+                method = None
+                try:
+                    method = getattr(Helper, item['function'])
+                    menu.append_item(Option(item['label'], method))
+                except AttributeError:
+                    pass
         return menu
